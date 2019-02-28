@@ -39,6 +39,21 @@ public class Main {
 	}
 	
 	public static boolean checkAnswer(int answer) {
+		
+		int random = (int)(Math.random()*100)+1;
+		//int random = 11;
+		
+		if(random < answer) {
+			Main.max = answer;
+			return false;
+		}else if(random > answer) {
+			Main.min = answer;
+			return false;
+		}else if(random == answer) {
+			return true;
+		}
+		
+		
 		return true;
 	}
 }
